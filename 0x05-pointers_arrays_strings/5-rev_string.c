@@ -27,6 +27,7 @@ void rev_string(char *s)
 int _strlen(char *s)
 {
 	int len = 0, index = 0;
+
 	while (s[index] != '\0')
 	{
 		len++;
@@ -37,7 +38,7 @@ int _strlen(char *s)
 
 /**
  * change_char - change address of char
- * @: char 1
+ * @a: char 1
  * @b: char 2
  * Return: Null
  */
