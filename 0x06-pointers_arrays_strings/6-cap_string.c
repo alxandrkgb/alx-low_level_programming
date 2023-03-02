@@ -9,39 +9,26 @@
  */
 char *cap_string(char *str)
 {
-	int i;
-	int capitalize_next = i;
+	int i = 0;
+	int capitalize_next = 1;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i])
 	{
-		if (capitalize_next && islower(str[i]))
+		if (capitalize_next && (str[i] >= 'a' && str[i] <= 'z'))
 		{
-			str[i] = toupper(str[i]);
+			str[i] = str[i] - 'a' + 'A';
 		}
 
 		capitalize_next = 0;
 
-		switch (str[i])
+		if (str[i] == ' ' || str[i] '\t' || str[i] == '\n' ||
+				str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+				str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+				str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == "}')
 		{
-			case ' ':
-			case '\t':
-			case '\n':
-			case ',':
-			case ';':
-			case '.':
-			case '!':
-			case '?':
-			case '"':
-			case '(':
-			case ')':
-			case '{':
-			case '}':
-				capitalize_next = 1;
-				break;
-			default:
-				break;
+			capitalize_next = 1;
 		}
-	}
-
-	return (str);
+		i++;
+}
+return (str);
 }
