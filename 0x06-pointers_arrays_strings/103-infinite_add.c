@@ -39,7 +39,7 @@ char *infinite_add(char *num1, char *num2, char *result, int result_size)
 			*(result + big) = (operation % 10) + '0';
 		else
 			*(result + big) = '0';
-		if (length_num > 0)
+		if (length_num1 > 0)
 			length_num1--, d1 = *(num1 + length_num1) - '0';
 		else
 			d1 = 0;
@@ -47,7 +47,7 @@ char *infinite_add(char *num1, char *num2, char *result, int result_size)
 			length_num2--, d2 = *(num2 + length_num2) - '0';
 		else
 			d2 = 0;
-		big--, result_size;
+		big--, result_size--;
 	}
 	if (*result == '0')
 		return (result + 1);
