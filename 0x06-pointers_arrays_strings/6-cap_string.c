@@ -1,6 +1,3 @@
-#include "main.h"
-#include <ctype.h>
-
 /**
  * cap_string - Capitalizes all words of a string.
  * @str: The input string
@@ -24,11 +21,12 @@ char *cap_string(char *str)
 		if (str[i] == ' ' || str[i] '\t' || str[i] == '\n' ||
 				str[i] == ',' || str[i] == ';' || str[i] == '.' ||
 				str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-				str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == "}')
+				str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
 		{
 			capitalize_next = 1;
 		}
 		i++;
-}
+	}
+
 return (str);
 }
