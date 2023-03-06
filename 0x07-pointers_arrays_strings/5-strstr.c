@@ -8,20 +8,20 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-int i, j;
+	int i, j;
 
-while (*haystack)
-{
-i = 0;
-j = 0;
-while (needle[j] && haystack[i] == needle[j])
-{
-i++;
-j++;
-}
-if (!needle[j])
-return (haystack);
-haystack++;
-}
-return (NULL);
+	while (*haystack)
+	{
+		i = 0;
+		j = 0;
+		while (needle[j] && haystack[i] == needle[j])
+		{
+			i++;
+			j++;
+		}
+		if (!needle[j])
+			return (haystack);
+		haystack++;
+	}
+	return (NULL);
 }
