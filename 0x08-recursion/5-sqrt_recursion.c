@@ -19,20 +19,41 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		int i = 1;
+		return (_sqrt_helper(n, 1, n));
+	}
+}
 
-		while (i * i <= n)
+
+/**
+ * _sqrt_helper - Helper function for _sqrt_recursion
+ * @n: The number to find the natural square root of
+ * @min: The minimum possible square root.
+ * @max: The maximum possible square root
+ *
+ * Return: The natural square root of the number,
+ * or -1 if the number does not have a natural square root
+ */
+int _sqrt_helper(int n, int min, int max)
+{
+	if (max < min)
+	{
+		return (-1);
+	}
+	else
+	{
+		int guess = (min + max) / 2;
+
+		if (guess * guess == n)
 		{
-			i++;
+			return (guess);
 		}
-		i--;
-		if (i * i == n)
+		else if (guess * guess > n)
 		{
-			return (i);
+			return (_sqrt_helper(n, min, guess - 1));
 		}
 		else
 		{
-			return (-1);
+			return (_sqrt_helper(n, guess + 1, max));
 		}
 	}
 }
