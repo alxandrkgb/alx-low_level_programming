@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -19,7 +20,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j] != '0'; j++)
 			len++;
 		len++;
 	}
@@ -33,11 +34,12 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			str[pos] = av[i][j];
-				pos++;
+			pos++;
 		}
 		str[pos] = '\n';
 		pos++;
 	}
-	str[pos] = '0';
+	str[pos] = '\0';
+
 	return (str);
 }
