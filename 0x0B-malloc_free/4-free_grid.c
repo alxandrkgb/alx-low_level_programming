@@ -4,7 +4,6 @@
 /**
  * free_grid - prints
  * @grid: the address of the two dimensional grid
- * @i: address
  * @height: height of the grid
  *
  * Return: Nothing
