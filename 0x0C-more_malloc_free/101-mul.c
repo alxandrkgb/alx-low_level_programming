@@ -6,7 +6,7 @@
  * is_digit - checks if a string contains a non-digit char
  * @s: string to be evaluated
  *
- * Return: o if a non-digit is found, 1 otherwise
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
 int is_digit(char *s)
 {
@@ -14,7 +14,7 @@ int is_digit(char *s)
 
 	while (s[i])
 	{
-		if (s[i] < '0' || s[i] > '0')
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
 		i++;
 	}
