@@ -225,7 +225,6 @@ if (final_prod[index] != 'x')
 putchar(final_prod[index]);
 }
 putchar('\n');
-
 free(next_prod);
 free(final_prod);
 
