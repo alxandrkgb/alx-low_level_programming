@@ -27,21 +27,3 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	return ((void *)ptr);
 }
-
-/**
- * memset - sets memory to a constant byte
- * @s: pointer to memory
- * @b: byte to set memory to
- * @n: number of bytes to set
- *
- * REturn: pointer to memory
- */
-void *memset(void *s, int b, size_t n)
-{
-	char *p = s;
-
-	while (n--)
-		*p++ = (char)b;
-
-	return (s);
-}
