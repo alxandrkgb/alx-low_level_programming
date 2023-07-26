@@ -1,0 +1,18 @@
+# Makefile for the school project
+
+# Compiler to be used
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Executable name
+EXECUTABLE = school
+
+# Default rule
+all:
+	$(CC) $(SRC) -o $(EXECUTABLE)
+
+# Clean rule to remove the executable
+clean:
+	rm -f $(EXECUTABLE)
