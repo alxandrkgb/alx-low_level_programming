@@ -1,0 +1,19 @@
+# Makefile for the school project
+
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Executable name
+EXECUTABLE = school
+
+# Source files
+SRCS = main.c school.c
+
+# Default rule
+all:
+	$(CC) $(CFLAGS) $(SRCS) -o $(EXECUTABLE)
+
+# Clean rule to remove the executable
+clean:
+	rm -f $(EXECUTABLE)
